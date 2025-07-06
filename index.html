@@ -1,42 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width", initial-scale=1.0 />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <title>Ishan Kanishka | Portfolio</title>
+  <meta name="description" content="Ishan Kanishka - Software Engineering Student and Web Developer Portfolio">
+  <meta name="keywords" content="software engineering, web development, Java, internship, portfolio">
+  <title>Ishan Kanishka | Software Engineering Student & Web Developer</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Ishan Kanishka</h1>
-    <p>Software Engineering Student | Web Developer</p>
-  </header>
-
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>I’m a Software Engineering student from Sri Lanka, currently learning Java, web development, and backend.
-	    I'm looking for an internship in order to gain some experience and get a job in the future to feed my family.</p>
-    </section>
-
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <strong>Toy Store Management System</strong> – Java + JSP  
-          <br>
-          <a href="https://github.com/Ishan-Kanishka/ToyStore" target="_blank">View on GitHub</a>
-        </li>
-        <!-- Add more projects later -->
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="index.html">IK</a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="skills.html" class="nav-link">Skills</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
-    </section>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
 
-    <section>
-      <h2>Contact</h2>
-      <p>Email: ikanishka368@email.com</p>
-      <p>GitHub: <a href="https://github.com/Ishan-Kanishka" target="_blank">github.com/Ishan-Kanishka</a></p>
-      <p>Instagram: <a href="https://www.instagram.com/21kanishka21/" target="_blank"> 21kanishka21 </p>
-    </section>
-  </main>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">Hi, I'm <span class="highlight">Ishan Kanishka</span></h1>
+        <p class="hero-subtitle">Software Engineering Student & Web Developer</p>
+        <p class="hero-description">Passionate about creating innovative solutions and learning new technologies. Currently seeking internship opportunities to grow my skills and contribute to meaningful projects.</p>
+        <div class="hero-buttons">
+          <a href="projects.html" class="btn btn-primary">View My Work</a>
+          <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="profile-placeholder">
+          <img src="pfp.jpg" alt="profile picture">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Overview Section -->
+  <section class="overview">
+    <div class="container">
+      <h2 class="section-title">Quick Overview</h2>
+      <div class="overview-grid">
+        <div class="overview-card">
+          <i class="fas fa-code"></i>
+          <h3>Technical Skills</h3>
+          <p>Java (Intermediate), Python, JavaScript, HTML, CSS, JSP, Servlets</p>
+          <a href="skills.html" class="overview-link">Learn More</a>
+        </div>
+        <div class="overview-card">
+          <i class="fas fa-project-diagram"></i>
+          <h3>Projects</h3>
+          <p>Toy Store Management System, Text Editor, Mini Projects</p>
+          <a href="projects.html" class="overview-link">View Projects</a>
+        </div>
+        <div class="overview-card">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>Education</h3>
+          <p>Software Engineering Student from Sri Lanka</p>
+          <a href="about.html" class="overview-link">About Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Ishan Kanishka. All rights reserved.</p>
+      <p>Made with <i class="fas fa-heart"></i> for the tech community</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

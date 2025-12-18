@@ -1119,3 +1119,28 @@ section {
     scroll-behavior: smooth;
   }
 }
+
+/* Intro Animation Screen */
+#intro-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0d0d0d; /* matches dark portfolios */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-family: "Poppins", sans-serif;
+  z-index: 9999;
+  animation: fadeOut 1.8s ease-in-out forwards;
+}
+
+/* Fade out animation */
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}

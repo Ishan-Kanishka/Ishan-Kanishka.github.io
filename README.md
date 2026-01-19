@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website designed to showcase your skills and attract potential employers and clients. Built with a clean multi-page structure for easy maintenance.
 
-## ✨ Features
+## ✨ Features...
 
 - **Multi-Page Structure**: Separate pages for each section (Home, About, Skills, Projects, Contact)
 - **Modern Design**: Clean, professional layout with smooth animations

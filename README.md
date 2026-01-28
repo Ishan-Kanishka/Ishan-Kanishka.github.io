@@ -1,4 +1,4 @@
-# Ishan Kanishka - Professional Portfolio
+# Ishan Kanishka - Professional Portfolio (I honestley vibe coded the whole thing)
 
 A modern, responsive portfolio website designed to showcase your skills and attract potential employers and clients. Built with a clean multi-page structure for easy maintenance.
 

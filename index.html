@@ -1,193 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <meta name="description" content="Ishan Kanishka - Software Engineering Student and Web Developer Portfolio">
-  <meta name="keywords" content="software engineering, web development, Java, internship, portfolio">
-  <title>Ishan Kanishka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>V K Ishan Kanishka | Supply Chain • GIS • Data • Information Systems</title>
+  <meta name="description" content="Ishan Kanishka is an Information Systems Engineering undergraduate with hands-on Supply Chain and Logistics experience and interests in GIS, spatial data, analytics and information systems.">
+  <meta name="author" content="V K Ishan Kanishka">
+  <meta name="keywords" content="Supply Chain, Logistics, GIS, Spatial Data, Information Systems, Inventory Management, Warehouse Operations, Supply Chain Analytics, ERP, Sri Lanka">
+  <link rel="canonical" href="https://ishan-kanishka.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ishan-kanishka.github.io/">
+  <meta property="og:title" content="V K Ishan Kanishka | Supply Chain • GIS • Data • Information Systems">
+  <meta property="og:description" content="Ishan Kanishka is an Information Systems Engineering undergraduate with hands-on Supply Chain and Logistics experience and interests in GIS, spatial data, analytics and information systems.">
+  <meta property="og:image" content="https://ishan-kanishka.github.io/favicon.svg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="V K Ishan Kanishka | Supply Chain • GIS • Data • Information Systems">
+  <meta name="twitter:description" content="Ishan Kanishka is an Information Systems Engineering undergraduate with hands-on Supply Chain and Logistics experience and interests in GIS, spatial data, analytics and information systems.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- Intro Animation -->
-<div id="intro-screen">
-  <p>I hope you're having an amazing day ✨</p>
-</div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Navigation -->
-  <nav class="navbar">
+  <header class="navbar" id="site-nav">
     <div class="nav-container">
-      <div class="nav-logo">
-        <a href="index.html">IK</a>
-      </div>
-      <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link active">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="skills.html" class="nav-link">Skills</a></li>
-        <li><a href="projects.html" class="nav-link">Projects</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <a class="nav-logo" href="#home">
+        <span class="logo-mark" aria-hidden="true">IK</span>
+        <span class="logo-text">
+          <span class="logo-name">V K Ishan Kanishka</span>
+          <span class="logo-tag">Supply Chain · GIS · IS</span>
+        </span>
+      </a>
+      <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#supply-chain-gis" class="nav-link">Supply Chain + GIS</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#github" class="nav-link">GitHub</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
     </div>
-  </nav>
+  </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-container">
-      <div class="hero-content">
-        <h1 class="hero-title"><span class="highlight">Ishan Kanishka</span></h1>
-        <p class="hero-subtitle">Software Engineering Intern | Supply Chain Operations</p>
-        <p class="hero-description">I am a software engineering intern who is interested in Supply Chain Management, Project management and a bit of data analysis.</p>
-        <div class="hero-buttons">
-          <a href="projects.html" class="btn btn-primary">View My Work</a>
-          <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow">V K Ishan Kanishka · Colombo, Sri Lanka</p>
+          <h1>Supply Chain × GIS × Data × Information Systems</h1>
+          <p class="hero-lead">Building practical solutions at the intersection of supply chain operations, geographic information systems, data and technology.</p>
+          <p class="hero-intro">Information Systems Engineering undergraduate with hands-on Supply Chain and Logistics experience, combining operational knowledge with data, GIS, databases and technology.</p>
+          <div class="status-pill" role="status">
+            <span class="status-dot" aria-hidden="true"></span>
+            Open to International Remote Opportunities • Available for Travel
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore My Work</a>
+            <a class="btn btn-ghost" href="https://github.com/Ishan-Kanishka" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+          <ul class="hero-facts">
+            <li><strong>Supply Chain</strong> Warehouse operations &amp; logistics</li>
+            <li><strong>Degree</strong> Information Systems Engineering · 2028</li>
+            <li><strong>Focus</strong> GIS, spatial data &amp; systems</li>
+          </ul>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <svg class="network-map" viewBox="0 0 520 440" role="img" aria-label="Stylized logistics and GIS network">
+            <defs>
+              <pattern id="geo-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1E4D2B" stroke-opacity="0.22" stroke-width="0.6"/>
+              </pattern>
+              <linearGradient id="route" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#FF6B35"/>
+                <stop offset="100%" stop-color="#FF8A5B"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="520" height="440" rx="18" fill="#0F2942"/>
+            <rect x="16" y="16" width="488" height="408" rx="12" fill="url(#geo-grid)"/>
+            <path class="landmass" d="M80 90 C140 50 210 70 250 110 C300 70 380 80 430 130 C470 170 450 250 400 290 C430 330 390 380 320 390 C250 410 170 380 120 330 C70 280 50 180 80 90 Z" fill="#1E4D2B" fill-opacity="0.42" stroke="#7BA08A" stroke-opacity="0.85"/>
+            <path class="route-line route-a" d="M120 160 C180 140 230 180 280 170 C340 155 380 200 420 210"/>
+            <path class="route-line route-b" d="M150 300 C210 250 250 250 300 280 C350 310 380 280 410 250"/>
+            <path class="route-line route-c" d="M160 210 C200 230 220 270 270 300"/>
+            <g class="node warehouse" transform="translate(120,160)">
+              <rect x="-11" y="-11" width="22" height="22" rx="3" fill="#F4F7F6"/>
+              <rect x="-6" y="-2" width="12" height="10" fill="#0F2942"/>
+            </g>
+            <g class="node warehouse" transform="translate(270,300)">
+              <rect x="-11" y="-11" width="22" height="22" rx="3" fill="#F4F7F6"/>
+              <rect x="-6" y="-2" width="12" height="10" fill="#0F2942"/>
+            </g>
+            <circle class="node delivery" cx="280" cy="170" r="7" fill="#1E4D2B"/>
+            <circle class="node delivery" cx="150" cy="300" r="7" fill="#1E4D2B"/>
+            <circle class="node delivery" cx="410" cy="250" r="7" fill="#1E4D2B"/>
+            <circle class="node data" cx="220" cy="230" r="5" fill="#7BA08A"/>
+            <circle class="node data" cx="350" cy="210" r="5" fill="#7BA08A"/>
+            <circle class="node key" cx="420" cy="210" r="8" fill="#FF6B35"/>
+            <text x="136" y="148" fill="#F4F7F6" font-size="11" font-family="IBM Plex Sans, sans-serif">Warehouse</text>
+            <text x="286" y="156" fill="#C5D4CC" font-size="11" font-family="IBM Plex Sans, sans-serif">Location</text>
+            <text x="430" y="204" fill="#FF6B35" font-size="11" font-family="IBM Plex Sans, sans-serif">Decision</text>
+            <text x="280" y="328" fill="#F4F7F6" font-size="11" font-family="IBM Plex Sans, sans-serif">Warehouse</text>
+            <text x="418" y="270" fill="#C5D4CC" font-size="11" font-family="IBM Plex Sans, sans-serif">Delivery</text>
+            <text x="32" y="48" fill="#C5D4CC" font-size="12" letter-spacing="1.5" font-family="IBM Plex Sans, sans-serif">NETWORK · SPACE · DATA</text>
+          </svg>
+          <p class="visual-caption">Warehouse → Transportation → Location → Data → GIS → Decision</p>
         </div>
       </div>
-      <div class="hero-image">
-        <div class="profile-placeholder">
-          <img src="pfp.jpg" alt="profile picture">
+    </section>
+
+    <section class="ready" id="international" aria-labelledby="ready-title">
+      <div class="container">
+        <div class="ready-intro">
+          <h2 id="ready-title">International &amp; Remote Ready</h2>
+          <p>Based in Sri Lanka, I am open to working with international teams remotely and willing to travel for meetings, project requirements, training, conferences, or field-based assignments.</p>
+        </div>
+        <div class="ready-grid">
+          <article class="ready-card">
+            <span class="ready-icon" aria-hidden="true">🌍</span>
+            <h3>International</h3>
+            <p>Open to opportunities with international organizations and teams.</p>
+          </article>
+          <article class="ready-card">
+            <span class="ready-icon" aria-hidden="true">💻</span>
+            <h3>Remote</h3>
+            <p>Comfortable working with distributed and remote teams.</p>
+          </article>
+          <article class="ready-card">
+            <span class="ready-icon" aria-hidden="true">✈️</span>
+            <h3>Travel</h3>
+            <p>Willing to travel when projects, meetings or assignments require it.</p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Quick Overview Section -->
-  <section class="overview">
-    <div class="container">
-      <h2 class="section-title">Quick Overview</h2>
-      <div class="overview-grid">
-        <div class="overview-card">
-          <i class="fas fa-code"></i>
-          <h3>Technical Skills</h3>
-          <p>Java (Intermediate), Python (Intermediate), JavaScript (Beginner), HTML, CSS, Lua, MS Excel</p>
-          <a href="skills.html" class="overview-link">Learn More</a>
-        </div>
-        <div class="overview-card">
-          <i class="fas fa-project-diagram"></i>
-          <h3>Projects</h3>
-          <p>File organizer, FantacyWorld, reminder app, LearningAboutAutoMobile, game-app, and more</p>
-          <a href="projects.html" class="overview-link">View Projects</a>
-        </div>
-        <div class="overview-card">
-          <i class="fas fa-graduation-cap"></i>
-          <h3>Education</h3>
-          <p>Infomration System Engineering Student from Sri Lanka</p>
-          <a href="about.html" class="overview-link">About Me</a>
-        </div>
+    <section class="story-rail" aria-label="How operations become decisions">
+      <div class="container">
+        <ol class="rail">
+          <li>
+            <span class="rail-stage">Physical Operations</span>
+            <span>Warehouse · Inventory · Transportation · Locations</span>
+          </li>
+          <li>
+            <span class="rail-stage">Information</span>
+            <span>ERP · Database · Data</span>
+          </li>
+          <li>
+            <span class="rail-stage">Intelligence</span>
+            <span>GIS · Analysis · Decision</span>
+          </li>
+          <li>
+            <span class="rail-stage">Impact</span>
+            <span>Better operations</span>
+          </li>
+        </ol>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- What I'm Up To Section -->
-  <section class="what-im-up-to">
-    <div class="container">
-      <h2 class="section-title">🚀 What I'm Up To</h2>
-      <div class="activities-grid">
-        <div class="activity-card">
-          <i class="fas fa-gamepad"></i>
-          <h3>🎮 Building Games</h3>
-          <p>Creating games and projects using Lua and Java</p>
-        </div>
-        <div class="activity-card">
-          <i class="fas fa-globe"></i>
-          <h3>🌐 Web Development</h3>
-          <p>Developing web applications with JavaScript, HTML, CSS, and TypeScript</p>
-        </div>
-        <div class="activity-card">
-          <i class="fas fa-lightbulb"></i>
-          <h3>📝 Experimenting</h3>
-          <p>Experimenting with new ideas and learning about software development</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tech Stack Section -->
-  <section class="tech-stack">
-    <div class="container">
-      <h2 class="section-title">💻 Tech Stack</h2>
-      
-      <div class="tech-categories">
-        <div class="tech-category">
-          <h3><i class="fas fa-language"></i> Programming Languages</h3>
-          <div class="tech-badges">
-            <span class="tech-badge">Java</span>
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">C++</span>
-            <span class="tech-badge">Lua</span>
-            <span class="tech-badge">JavaScript</span>
-            <span class="tech-badge">HTML5</span>
-            <span class="tech-badge">CSS</span>
-            <span class="tech-badge">TypeScript</span>
+    <section class="section" id="about">
+      <div class="container">
+        <p class="section-kicker">About</p>
+        <h2>From Operations to Information Systems</h2>
+        <p class="section-lead">My professional interests sit at the intersection of supply chain operations, information systems, GIS and data.</p>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>Working in supply chain operations has given me practical exposure to how inventory, documentation, transportation, people and information have to work together. At the same time, my Information Systems Engineering studies have developed my interest in databases, software, data and analytical systems. I am particularly interested in exploring how GIS and data-driven technologies can support better operational and supply chain decisions.</p>
+            <p>My current role gives me exposure to real operational challenges, while my studies and technical projects allow me to explore how technology and data can improve those processes.</p>
+            <p class="positioning">I am interested in using information systems, data, GIS and technology to understand real-world operational problems and improve decision-making across supply chains and logistics.</p>
           </div>
-        </div>
-        
-        <div class="tech-category">
-          <h3><i class="fas fa-tools"></i> Tools & IDEs</h3>
-          <div class="tech-badges">
-            <span class="tech-badge">Git</span>
-            <span class="tech-badge">Eclipse</span>
-            <span class="tech-badge">IntelliJ IDEA</span>
-            <span class="tech-badge">MS Excel</span>
-            <span class="tech-badge">Spyder(python editor)</span>
-            <span class="tech-badge">Neovim</span>
-            <span class="tech-badge">VS Code</span>
-          </div>
-        </div>
-        
-        <div class="tech-category">
-          <h3><i class="fas fa-database"></i> Databases</h3>
-          <div class="tech-badges">
-            <span class="tech-badge">MySQL</span>
-            <span class="tech-badge">MSSQL</span>
-          </div>
-        </div>
-        
-        <div class="tech-category">
-          <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
-          <div class="tech-badges">
-            <span class="tech-badge">Node.js</span>
-            <span class="tech-badge">Angular</span>
-            <span class="tech-badge">Electron</span>
-            <span class="tech-badge">Java Swing</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GitHub Stats Section -->
-  <section class="github-stats">
-    <div class="container">
-      <h2 class="section-title">📊 GitHub Statistics</h2>
-      <div class="stats-grid">
-        <div class="stats-card">
-          <h3>Most Used Languages</h3>
-          <div class="stats-content">
-            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ishan-Kanishka&layout=compact&theme=dark&hide_border=true&bg_color=000000&title_color=ffd700&text_color=ffffff" alt="Top Languages">
-          </div>
-        </div>
-        <div class="stats-card">
-          <h3>GitHub Stats</h3>
-          <div class="stats-content">
-            <img src="https://github-readme-stats.vercel.app/api?username=Ishan-Kanishka&show_icons=true&theme=dark&hide_border=true&bg_color=000000&title_color=ffd700&text_color=ffffff&icon_color=ffd700" alt="GitHub Stats">
+          <div class="about-split">
+            <article class="lens-card">
+              <h3>Operational perspective</h3>
+              <p>Hands-on supply chain and warehouse operations: inventory, ERP systems, inbound and outbound logistics, shipment tracking, returns, documentation and process improvement.</p>
+            </article>
+            <article class="lens-card lens-tech">
+              <h3>Technical perspective</h3>
+              <p>Information Systems Engineering studies and projects in SQL, PostgreSQL, PostGIS, Python, ETL, QGIS, GIS, data QA/QC, databases and software development.</p>
+            </article>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
+    <section class="section alt" id="direction">
+      <div class="container">
+        <p class="section-kicker">Career direction</p>
+        <h2>Where I'm Heading</h2>
+        <p class="section-lead">Areas I am actively developing toward — not roles I already hold.</p>
+        <div class="card-grid six">
+          <article class="plain-card">
+            <h3>Supply Chain Analytics</h3>
+            <p>Using operational and business data to understand performance and support decisions.</p>
+          </article>
+          <article class="plain-card">
+            <h3>Logistics &amp; Transportation</h3>
+            <p>Exploring how networks, routes, locations and operational data influence logistics.</p>
+          </article>
+          <article class="plain-card">
+            <h3>GIS &amp; Spatial Analysis</h3>
+            <p>Using geographic information and spatial databases to understand real-world problems.</p>
+          </article>
+          <article class="plain-card">
+            <h3>Information Systems</h3>
+            <p>Connecting people, processes, data and technology to improve business operations.</p>
+          </article>
+          <article class="plain-card">
+            <h3>Supply Chain Technology</h3>
+            <p>Exploring ERP, databases, analytics and digital systems supporting modern supply chains.</p>
+          </article>
+          <article class="plain-card">
+            <h3>Operations &amp; Process Improvement</h3>
+            <p>Understanding operational workflows and identifying opportunities to improve efficiency.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <p class="section-kicker">Experience</p>
+        <h2>Professional Experience</h2>
+        <p class="section-lead">Operational work in warehouse supply chain, alongside remote software engineering practice.</p>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <p class="role">Junior Executive — Supply Chain (Warehouse Operations)</p>
+              <p class="org">Ceylon Dubhe (Pvt) Ltd</p>
+              <p class="dates">January 2026 — Present · Colombo, Sri Lanka</p>
+            </div>
+            <div class="achievement-grid">
+              <article class="stat-card">
+                <p class="stat"><span class="count" data-target="3000">0</span>+</p>
+                <h3>3,000+ SKUs</h3>
+                <p>Supporting inventory and warehouse operations across a high-volume SKU environment.</p>
+              </article>
+              <article class="stat-card">
+                <h3>Logistics Coordination</h3>
+                <p>Coordinating inbound/outbound activities and following up on shipments with transporters, couriers and internal teams.</p>
+              </article>
+              <article class="stat-card">
+                <h3>Inventory Accuracy</h3>
+                <p>Reconciling physical and system inventory and investigating discrepancies.</p>
+              </article>
+              <article class="stat-card">
+                <p class="stat"><span class="count" data-target="18">0</span>+</p>
+                <h3>Team Coordination</h3>
+                <p>Supporting daily workflow across a warehouse team of 18+.</p>
+              </article>
+              <article class="stat-card">
+                <h3>Process Improvement</h3>
+                <p>Contributing to warehouse layout and workflow improvements to improve picking efficiency.</p>
+              </article>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <p class="role">Software Engineering Intern</p>
+              <p class="org">Infinity AI</p>
+              <p class="dates">September 2025 — March 2026 · Remote</p>
+            </div>
+            <p class="exp-copy">This role developed my ability to work in a remote technical environment — collaborating with a distributed team, managing deadlines independently, and working with structured data, databases, Git/GitHub and technical systems.</p>
+            <ul class="chip-row">
+              <li>Remote teamwork</li>
+              <li>Structured data</li>
+              <li>Databases</li>
+              <li>Git / GitHub</li>
+              <li>Problem solving</li>
+              <li>Deadline management</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="skills">
+      <div class="container">
+        <p class="section-kicker">Skills</p>
+        <h2>Technical Skills</h2>
+        <p class="section-lead">A working mix of spatial tools, data practice, operations knowledge and software.</p>
+        <div class="skills-grid">
+          <article class="skill-group">
+            <h3>GIS &amp; Spatial</h3>
+            <ul>
+              <li>QGIS</li>
+              <li>PostGIS</li>
+              <li>GIS</li>
+              <li>Spatial Data</li>
+              <li>GPS Data</li>
+              <li>Geographic Analysis</li>
+              <li>Mapping</li>
+              <li>Data QA/QC</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Data &amp; Databases</h3>
+            <ul>
+              <li>SQL</li>
+              <li>PostgreSQL</li>
+              <li>Python</li>
+              <li>Pandas</li>
+              <li>ETL</li>
+              <li>Relational Databases</li>
+              <li>Data Validation</li>
+              <li>Data Quality</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Supply Chain &amp; Operations</h3>
+            <ul>
+              <li>Inventory Management</li>
+              <li>Warehouse Operations</li>
+              <li>Logistics Coordination</li>
+              <li>Shipment Tracking</li>
+              <li>ERP Systems</li>
+              <li>Inventory Reconciliation</li>
+              <li>Operational Reporting</li>
+              <li>Process Improvement</li>
+              <li>Documentation</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Technology</h3>
+            <ul>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Java</li>
+              <li>JavaScript</li>
+              <li>Excel</li>
+              <li>Microsoft Office</li>
+              <li>Software Development</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <p class="section-kicker">Projects</p>
+        <h2>Selected Work</h2>
+        <p class="section-lead">Two projects: a GIS and information-management workflow, and a deployed software application.</p>
+
+        <article class="featured-project">
+          <div class="project-head">
+            <span class="label">Featured GIS Project</span>
+            <h3>ReliefMap</h3>
+            <p class="project-sub">Humanitarian Field Information &amp; GIS System</p>
+          </div>
+          <p>An end-to-end GIS and information-management portfolio project simulating a humanitarian flood-response workflow. The project demonstrates how field assessment data can move from collection and validation through ETL, spatial database storage, QA/QC and GIS-based analysis.</p>
+          <p class="disclaimer">Personal portfolio project using fictional/synthetic assessment data. It does not represent work on an actual humanitarian response.</p>
+          <p>This project reflects my interest in how structured information, spatial data and technology can support operational decision-making.</p>
+          <ol class="workflow">
+            <li>KoboToolbox</li>
+            <li>Python / Pandas</li>
+            <li>PostgreSQL / PostGIS</li>
+            <li>SQL QA/QC</li>
+            <li>QGIS</li>
+            <li>Operational Information</li>
+          </ol>
+          <ul class="chip-row">
+            <li>KoboToolbox</li>
+            <li>Python</li>
+            <li>Pandas</li>
+            <li>PostgreSQL</li>
+            <li>PostGIS</li>
+            <li>SQL</li>
+            <li>QGIS</li>
+            <li>ETL</li>
+            <li>GIS</li>
+            <li>Data QA/QC</li>
+          </ul>
+          <a class="btn btn-primary" href="https://github.com/Ishan-Kanishka/reliefmap-humanitarian-im" target="_blank" rel="noopener noreferrer">View Project on GitHub</a>
+        </article>
+
+        <article class="secondary-project">
+          <div>
+            <span class="label muted">Software Development</span>
+            <h3>GameApp</h3>
+            <p>A software development project demonstrating my ability to build, experiment with and deploy an interactive web application.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://ishan-kanishka.github.io/game-app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              <a class="btn btn-outline" href="https://github.com/Ishan-Kanishka/game-app" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section navy-block" id="supply-chain-gis">
+      <div class="container">
+        <p class="section-kicker light">Intersection</p>
+        <h2>Where Supply Chain Meets GIS</h2>
+        <p class="section-lead light">Supply chains operate in physical space. GIS provides a way to understand that space.</p>
+
+        <div class="chain-diagram" aria-label="Supply chain flow connected to spatial concepts">
+          <div class="flow-col">
+            <div class="flow-node">Suppliers</div>
+            <span class="flow-arrow" aria-hidden="true">↓</span>
+            <div class="flow-node">Warehouses</div>
+            <span class="flow-arrow" aria-hidden="true">↓</span>
+            <div class="flow-node accent">Transportation Network</div>
+            <span class="flow-arrow" aria-hidden="true">↓</span>
+            <div class="flow-node">Distribution</div>
+            <span class="flow-arrow" aria-hidden="true">↓</span>
+            <div class="flow-node">Customers</div>
+          </div>
+          <div class="connector" aria-hidden="true"></div>
+          <ul class="spatial-list">
+            <li>Location Data</li>
+            <li>Routes</li>
+            <li>Distances</li>
+            <li>Accessibility</li>
+            <li>Demand</li>
+            <li>Risk</li>
+            <li>Analytics</li>
+          </ul>
+        </div>
+
+        <p class="gis-explain">My interest is in exploring how geographic information and operational data can work together to understand logistics networks, transportation, distribution, inventory and other supply chain decisions.</p>
+        <p class="note">These are areas of interest, not claims of professional expertise.</p>
+        <ul class="interest-grid">
+          <li>Route analysis</li>
+          <li>Warehouse location</li>
+          <li>Distribution networks</li>
+          <li>Transportation planning</li>
+          <li>Geographic risk</li>
+          <li>Accessibility</li>
+          <li>Demand mapping</li>
+          <li>Spatial optimization</li>
+          <li>Supply chain visibility</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="container">
+        <p class="section-kicker">Education</p>
+        <h2>Education</h2>
+        <div class="edu-grid">
+          <article class="edu-card">
+            <p class="dates">Expected graduation 2028</p>
+            <h3>Sri Lanka Institute of Information Technology (SLIIT)</h3>
+            <p class="org">Bachelor of Science (Hons) in Information Systems Engineering</p>
+            <p>Malabe, Sri Lanka</p>
+            <ul class="chip-row">
+              <li>Information Systems</li>
+              <li>Data Management</li>
+              <li>Process Analysis</li>
+              <li>Databases</li>
+              <li>Technology</li>
+              <li>Business Operations</li>
+            </ul>
+          </article>
+          <article class="edu-card">
+            <p class="dates">2022</p>
+            <h3>Lumbini College</h3>
+            <p class="org">G.C.E. Advanced Level — Engineering Technology Stream</p>
+            <p>District Rank: 120th — Colombo</p>
+          </article>
+        </div>
+
+        <div class="horizon" id="building-2028">
+          <h3>Building Toward 2028</h3>
+          <p>I am currently developing my academic, technical and professional experience with the goal of progressing into international opportunities after completing my degree in 2028.</p>
+          <p>Until graduation, I am particularly interested in internships, remote projects, international collaborations and opportunities that allow me to continue developing in supply chain, GIS, data and information systems.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="github">
+      <div class="container github-panel">
+        <p class="section-kicker">GitHub</p>
+        <h2>Explore the Work Behind the Portfolio</h2>
+        <p>I use GitHub to document projects, technical experiments and the workflows behind my work.</p>
+        <p class="github-tags">GIS • Data • Software • Information Systems</p>
+        <a class="btn btn-primary" href="https://github.com/Ishan-Kanishka" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
+      </div>
+    </section>
+
+    <section class="section navy-block" id="contact">
+      <div class="container contact-wrap">
+        <p class="section-kicker light">Contact</p>
+        <h2>Let's Work Across Borders</h2>
+        <p class="section-lead light">I am interested in connecting with organizations, teams and professionals working across supply chain, logistics, GIS, data and information systems.</p>
+        <p class="light-copy">Open to international remote opportunities and willing to travel for meetings, projects, training and field assignments when required.</p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:ikanishka368@gmail.com">Email Me</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/ishan-kanishka-9269a4274/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://github.com/Ishan-Kanishka" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+        <ul class="contact-meta">
+          <li><a href="mailto:ikanishka368@gmail.com">ikanishka368@gmail.com</a></li>
+          <li><a href="tel:+94714162739">+94 71-4162739</a></li>
+          <li>Colombo, Sri Lanka</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Ishan Kanishka. All rights reserved.</p>
-      <p>Made with <i class="fas fa-heart"></i> for the tech community</p>
+    <div class="container footer-row">
+      <p>V K Ishan Kanishka · Colombo, Sri Lanka</p>
+      <p>Information Systems Engineering undergraduate · Expected graduation 2028</p>
     </div>
   </footer>
 

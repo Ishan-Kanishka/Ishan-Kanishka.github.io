@@ -1,120 +1,102 @@
-// Mobile Navigation Toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+const navLinks = document.querySelectorAll(".nav-link");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navMenu.classList.toggle('active');
-});
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-  hamburger.classList.remove('active');
-  navMenu.classList.remove('active');
-}));
-
-// Form submission handling
-const contactForm = document.querySelector('.contact-form form');
-if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const name = this.querySelector('input[type="text"]').value;
-    const email = this.querySelector('input[type="email"]').value;
-    const subject = this.querySelectorAll('input[type="text"]')[1].value;
-    const message = this.querySelector('textarea').value;
-    
-    // Simple validation
-    if (!name || !email || !subject || !message) {
-      alert('Please fill in all fields');
-      return;
-    }
-    
-    // Here you would typically send the form data to a server
-    // For now, we'll just show a success message
-    alert('Thank you for your message! I will get back to you soon.');
-    this.reset();
+if (hamburger && navMenu) {
+  hamburger.addEventListener("click", () => {
+    const open = navMenu.classList.toggle("open");
+    hamburger.setAttribute("aria-expanded", String(open));
+    hamburger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
   });
 }
 
-// Add scroll reveal animation
-window.addEventListener('scroll', () => {
-  const reveals = document.querySelectorAll('.skill-category, .project-card, .overview-card, .mini-project-card, .info-card');
-  
-  reveals.forEach(element => {
-    const windowHeight = window.innerHeight;
-    const elementTop = element.getBoundingClientRect().top;
-    const elementVisible = 150;
-    
-    if (elementTop < windowHeight - elementVisible) {
-      element.classList.add('animate');
-    }
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("open");
+    hamburger?.setAttribute("aria-expanded", "false");
+    hamburger?.setAttribute("aria-label", "Open menu");
   });
 });
 
-// Add loading animation
-window.addEventListener('load', () => {
-  document.body.classList.add('loaded');
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    navMenu.classList.remove("open");
+    hamburger?.setAttribute("aria-expanded", "false");
+  }
 });
 
-// Intersection Observer for animations
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
+const navTargets = [...navLinks]
+  .map((link) => link.getAttribute("href"))
+  .filter((href) => href && href.startsWith("#"))
+  .map((href) => document.querySelector(href))
+  .filter(Boolean);
+
+const setActiveLink = () => {
+  let current = "home";
+  navTargets.forEach((section) => {
+    const top = section.getBoundingClientRect().top;
+    if (top <= 120) current = section.id;
+  });
+
+  navLinks.forEach((link) => {
+    const href = link.getAttribute("href");
+    link.classList.toggle("active", href === `#${current}`);
+  });
 };
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('fade-in');
-    }
-  });
-}, observerOptions);
+window.addEventListener("scroll", setActiveLink, { passive: true });
+setActiveLink();
 
-// Observe elements for animation
-document.addEventListener('DOMContentLoaded', () => {
-  const animateElements = document.querySelectorAll('.skill-category, .project-card, .overview-card, .mini-project-card, .info-card, .contact-item');
-  animateElements.forEach(el => observer.observe(el));
-});
+const animateCount = (el) => {
+  const target = Number(el.dataset.target);
+  if (reducedMotion) {
+    el.textContent = target.toLocaleString();
+    return;
+  }
+  const duration = 1200;
+  const start = performance.now();
+  const tick = (now) => {
+    const progress = Math.min((now - start) / duration, 1);
+    el.textContent = Math.floor(target * progress).toLocaleString();
+    if (progress < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+};
 
-// Add CSS for fade-in animation
-const style = document.createElement('style');
-style.textContent = `
-  .fade-in {
-    animation: fadeInUp 0.6s ease-out forwards;
-  }
-  
-  .animate {
-    animation: slideInUp 0.6s ease-out forwards;
-  }
-  
-  @keyframes slideInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .loaded {
-    opacity: 1;
-  }
-  
-  body {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-`;
-document.head.appendChild(style); 
+const counters = document.querySelectorAll(".count");
+if ("IntersectionObserver" in window) {
+  const counterObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+  counters.forEach((counter) => counterObserver.observe(counter));
+} else {
+  counters.forEach(animateCount);
+}
 
-// Intro (Animation)
-window.addEventListener("load", () => {
-    const intro = document.getElementById("intro-screen");
-    setTimeout(() => {
-        intro.style.display = "none";
-    }, 2000); // 2 seconds
-});
+const revealTargets = document.querySelectorAll(
+  ".ready-card, .plain-card, .stat-card, .skill-group, .featured-project, .secondary-project, .edu-card, .lens-card"
+);
+
+if (!reducedMotion && "IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+  revealTargets.forEach((el) => revealObserver.observe(el));
+}

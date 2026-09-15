@@ -15,7 +15,7 @@ navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     navMenu.classList.remove("open");
     hamburger?.setAttribute("aria-expanded", "false");
-    hamburger?.setAttribute("aria-label", "Open menu");
+    hamburger.setAttribute("aria-label", "Open menu");
   });
 });
 
@@ -35,13 +35,10 @@ const navTargets = [...navLinks]
 const setActiveLink = () => {
   let current = "home";
   navTargets.forEach((section) => {
-    const top = section.getBoundingClientRect().top;
-    if (top <= 120) current = section.id;
+    if (section.getBoundingClientRect().top <= 120) current = section.id;
   });
-
   navLinks.forEach((link) => {
-    const href = link.getAttribute("href");
-    link.classList.toggle("active", href === `#${current}`);
+    link.classList.toggle("active", link.getAttribute("href") === `#${current}`);
   });
 };
 
@@ -54,7 +51,7 @@ const animateCount = (el) => {
     el.textContent = target.toLocaleString();
     return;
   }
-  const duration = 1200;
+  const duration = 1100;
   const start = performance.now();
   const tick = (now) => {
     const progress = Math.min((now - start) / duration, 1);
@@ -66,37 +63,39 @@ const animateCount = (el) => {
 
 const counters = document.querySelectorAll(".count");
 if ("IntersectionObserver" in window) {
-  const counterObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          animateCount(entry.target);
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
+  const counterObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.45 });
   counters.forEach((counter) => counterObserver.observe(counter));
 } else {
   counters.forEach(animateCount);
 }
 
-const revealTargets = document.querySelectorAll(
-  ".ready-card, .plain-card, .stat-card, .skill-group, .featured-project, .secondary-project, .edu-card, .lens-card"
-);
+const worldMap = document.getElementById("world-map");
+if (worldMap && "IntersectionObserver" in window) {
+  const mapObserver = new IntersectionObserver((entries) => {
+    worldMap.classList.toggle("paused", !entries[0].isIntersecting);
+  }, { threshold: 0.12 });
+  mapObserver.observe(worldMap);
+  if (reducedMotion) worldMap.classList.add("paused");
+}
 
+const revealTargets = document.querySelectorAll(
+  ".ready-card, .experience-feature, .featured-project, .secondary-project, .edu-card, .skill-group"
+);
 if (!reducedMotion && "IntersectionObserver" in window) {
-  const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("reveal");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("reveal");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
   revealTargets.forEach((el) => revealObserver.observe(el));
 }
